@@ -11,11 +11,9 @@ GMAIL_IMAP = 'imap.gmail.com'
 SSL_port = 465
 
 LOGIN = 'vedroidtsd.085@gmail.com'
-PWD = 'radamaerl-0'
-subject = 'Mail from Python'
+PWD = ''
 recipients = ['homutovan@live.com', 'elenar63@yandex.ru']
-message = 'Python is cool!'
-header = None
+
 
 class Email_client:
     
@@ -53,17 +51,11 @@ class Email_client:
         self.server.quit()
         self.mail.logout()
         
-gmail = Email_client(GMAIL_SMTP, GMAIL_IMAP, SSL_port, LOGIN, PWD)
-#gmail.create_msg(recipients, 'Бугагашеньки', 'Сорок тысяч обезьян!')
-#gmail.send_msg()
-print(gmail.receive_mail(header = 'Hfvfv,e'))
-#gmail.close_email()
+if __name__ == '__main__':
+        
+    gmail = Email_client(GMAIL_SMTP, GMAIL_IMAP, SSL_port, LOGIN, PWD)
+    gmail.create_msg(recipients, 'Python', 'Hello!')
+    gmail.send_msg()
+    print(gmail.receive_mail(header = ''))
 
-#recieve
-
-# 
-
-# print(email_message)
-# 
-# #end recieve
 
